@@ -1,0 +1,390 @@
+/* Existing CSS */
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+/* Body styling */
+body {
+    font-family: "Montserrat";
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Navigation bar styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding-top: 2vw;
+    z-index: 1000;
+}
+
+/* Section styling */
+section {
+    flex: 1;
+}
+
+/* Navigation list styling */
+nav ul {
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Navigation links styling */
+.przyciski {
+    font-size: 1.5vw;
+    margin-right: 4vw;
+    margin-top: 1vw;
+}
+
+.przyciski a {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+}
+
+.przyciski a:hover {
+    color: black;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+.main a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+    margin: 0 30px;
+}
+
+.main a:hover {
+    color: rgb(100, 100, 100);
+}
+
+/* Content section styling */
+.nwm {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* Distribute space evenly */
+    margin: 0 auto; /* Center align the content */
+    padding: 0 5vw; /* Padding on the sides */
+}
+
+.nwm-image {
+    flex: 1; /* Take equal space */
+    display: flex;
+    justify-content: center; /* Center the image */
+}
+
+.nwm-image img {
+    max-width: 90%;
+    max-height: 90%; /* Ensure image doesn't overflow */
+}
+
+.nwm-text {
+    flex: 1; /* Take equal space */
+    padding-left: 5vw; /* Space between image and text */
+    display: flex; /* Make this a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.nwm-text h2 {
+    margin-top: 0; /* Remove default margin */
+    font-size: 2vw;
+}
+
+.nwm-text p {
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    margin-right: 5vw;
+}
+
+/* Back link styling */
+.back {
+    margin-top: 12vw;
+    margin-bottom: 1vw;
+}
+
+.back a {
+    color: black;
+    font-size: 1.5vw;
+    margin-top: 12vw;
+    margin-left: 7.5vw;
+    margin-bottom: 1vw;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #d0d0d0;
+    padding: 3vw;
+    border-top: 1px solid #818181;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+/* Company Name Styling */
+.footer-company {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+/* Contact text styling */
+.footer-right p {
+    margin: 0;
+    font-size: 1.3vw;
+    color: #333;
+}
+
+/* Email link styling */
+.footer-right a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Media Query for Tablets and Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust navigation padding and font sizes */
+    nav {
+        height: auto; /* Allow nav height to adjust based on content */
+        padding: 1vw 2vw; /* Reduce padding for smaller screens */
+    }
+
+    /* Adjust font size and margins for navigation buttons */
+    .przyciski {
+        font-size: 3vw; /* Slightly larger for better readability */
+        margin-right: 2vw; /* Reduce right margin */
+        margin-top: 0.5vw; /* Reduce top margin */
+    }
+
+    /* Adjust main navigation link font size and margin */
+    .main a {
+        font-size: 5vw; /* Increase font size for visibility */
+        margin: 0 15px; /* Reduce horizontal margin */
+    }
+
+    /* Stack navigation items vertically */
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add vertical spacing between nav items */
+    }
+
+    /* Adjust the top margin of sections to account for the nav height */
+    section {
+        margin-top: 20vw; /* Increase top margin to prevent overlap */
+    }
+
+    /* Adjust the padding of .nwm for content sections */
+    .nwm {
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 0 2vw; /* Reduce side padding */
+        margin-top: 10vw;
+    }
+
+    .nwm-image, .nwm-text {
+        flex: none; /* Remove flex growth */
+        width: 100%; /* Full width */
+        padding: 0; /* Remove side padding */
+    }
+
+    .nwm-text {
+        padding-left: 0; /* Remove left padding */
+        margin-top: 2vw; /* Add top margin for spacing */
+    }
+
+    .nwm-text p {
+        margin-right: 0; /* Remove right margin */
+    }
+
+    /* Adjust the .opis margins and padding if present */
+    /* (Assuming .opis is used similarly in subpage) */
+    .opis p {
+        margin: 0 5vw; /* Reduce horizontal margins */
+        padding: 1vw; /* Adjust padding */
+    }
+
+    /* Adjust the image grid to have two columns if present */
+    /* (Assuming .image-grid is used similarly in subpage) */
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns instead of three */
+        gap: 2vw; /* Reduce gap between images */
+        margin: 1.5vw; /* Reduce margin around the grid */
+    }
+
+    /* Adjust overlay text size and position if present */
+    /* (Assuming .overlay-text is used similarly in subpage) */
+    .overlay-text {
+        bottom: 2vw; /* Move overlay text slightly higher */
+        left: 1vw; /* Maintain left position */
+        font-size: 3vw; /* Increase font size for readability */
+    }
+
+    /* Footer adjustments for smaller screens */
+    .footer-container {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-right {
+        text-align: center; /* Center align contact info */
+        margin-top: 1.5vw; /* Add top margin for spacing */
+    }
+
+    .footer-company {
+        font-size: 5vw; /* Increase company name font size */
+    }
+
+    .footer-right p {
+        font-size: 3vw; /* Increase contact text font size */
+    }
+
+    /* Adjust the back link for smaller screens */
+    .back {
+        margin-top: 20vw; /* Increase top margin */
+        margin-left: 5vw; /* Reduce left margin */
+        margin-bottom: 2vw; /* Increase bottom margin */
+    }
+
+    .back a {
+        font-size: 3vw; /* Increase font size */
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+/* Media Query for Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Further adjust navigation padding and font sizes */
+    nav {
+        padding: 2vw 4vw; /* Increase padding for better touch targets */
+    }
+
+    /* Adjust font size and margins for navigation buttons */
+    .przyciski {
+        font-size: 4vw; /* Further increase font size */
+        margin-right: 1vw; /* Reduce right margin */
+        margin-top: 0.5vw; /* Maintain top margin */
+    }
+
+    /* Adjust main navigation link font size */
+    .main a {
+        font-size: 6vw; /* Further increase font size for small screens */
+    }
+
+    /* Adjust the .nwm padding and layout for content sections */
+    .nwm {
+        padding: 0 2vw; /* Further reduce side padding */
+    }
+
+    .nwm-image img {
+        margin: 10vw;
+        max-width: 100%; /* Ensure image takes full width */
+        max-height: 100%; /* Ensure image doesn't overflow */
+    }
+
+    .nwm-text {
+        margin-top: 2vw; /* Maintain top margin for spacing */
+    }
+
+    .nwm-text h2 {
+        font-size: 3vw; /* Increase font size */
+    }
+
+    .nwm-text p {
+        font-size: 2vw; /* Increase font size */
+        margin-top: 2vw; /* Maintain top margin */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    /* Adjust the .opis margins and padding if present */
+    .opis p {
+        margin: 0 3vw; /* Further reduce horizontal margins */
+        padding: 1vw; /* Maintain padding */
+    }
+
+    /* Adjust the image grid to a single column if present */
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1.5vw; /* Reduce gap between images */
+        margin: 1vw; /* Further reduce margin around the grid */
+    }
+
+    /* Adjust overlay text size and position if present */
+    .overlay-text {
+        bottom: 1vw; /* Move overlay text higher */
+        left: 0.5vw; /* Adjust left position */
+        font-size: 4vw; /* Further increase font size for readability */
+    }
+
+    /* Footer adjustments for mobile screens */
+    .footer-company {
+        font-size: 6vw; /* Further increase company name font size */
+    }
+
+    .footer-right p {
+        font-size: 4vw; /* Further increase contact text font size */
+    }
+
+    /* Adjust the back link for mobile screens */
+    .back {
+        margin-top: 25vw; /* Increase top margin */
+        margin-left: 2vw; /* Further reduce left margin */
+        margin-bottom: 3vw; /* Increase bottom margin */
+    }
+
+    .back a {
+        font-size: 4vw; /* Further increase font size */
+        margin-left: 0; /* Remove left margin */
+    }
+}
