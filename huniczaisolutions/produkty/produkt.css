@@ -1,0 +1,177 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding-top: 2vw;
+    z-index: 1000;
+}
+
+section {
+    flex: 1;
+
+}
+
+nav ul {
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.przyciski {
+    font-size: 1.5vw;
+    margin-right: 4vw;
+    margin-top: 1vw;
+}
+
+.przyciski a {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+}
+
+.przyciski a:hover {
+    color: black;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+.main a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+    margin: 0 30px;
+}
+
+.main a:hover {
+    color: rgb(100, 100, 100);
+}
+
+.nwm {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between; /* Distribute space evenly */
+    margin: 0 auto; /* Center align the content */
+    padding: 0 5vw; /* Padding on the sides */
+}
+
+.nwm-image {
+    flex: 1; /* Take equal space */
+    display: flex;
+    justify-content: center; /* Center the image */
+}
+
+.nwm-image img {
+    max-width: 90%;
+    max-height: 90%; /* Ensure image doesn't overflow */
+}
+
+.nwm-text {
+    flex: 1; /* Take equal space */
+    padding-left: 5vw; /* Space between image and text */
+    display: flex; /* Make this a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+.nwm-text h2 {
+    margin-top: 0; /* Remove default margin */
+    font-size: 2vw;
+}
+
+.nwm-text p{
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    margin-right: 5vw;
+}
+
+.footer {
+    background-color: #d0d0d0;
+    padding: 3vw;
+    border-top: 1px solid #818181;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.footer-left {
+    flex: 1;
+}
+
+/* Company Name Styling */
+.footer-company {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+/* Contact text styling */
+.footer-right p {
+    margin: 0;
+    font-size: 1.3vw;
+    color: #333;
+}
+
+/* Email link styling */
+.footer-right a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+section:not(.footer-section) {
+    flex: 1;
+}
+
+.back {
+    margin-top: 12vw;
+    margin-bottom: 1vw;
+}
+
+
+.back a {
+    color: black;
+    font-size: 1.5vw;
+    margin-top: 12vw;
+    margin-left: 7.5vw;
+    margin-bottom: 1vw;
+}
