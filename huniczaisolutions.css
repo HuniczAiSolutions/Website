@@ -1,0 +1,203 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: white;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding-top: 2vw;
+    z-index: 1000;
+}
+
+section {
+    margin-top: 12vw;
+}
+
+nav ul {
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.przyciski {
+    font-size: 1.5vw;
+    margin-right: 4vw;
+    margin-top: 1vw;
+}
+
+.przyciski a {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+}
+
+.przyciski a:hover {
+    color: black;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+.main a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+    margin: 0 30px;
+}
+
+.main a:hover {
+    color: rgb(100, 100, 100);
+}
+
+.glownetlo {
+    background-image: url(https://images.unsplash.com/photo-1701486485364-edaa591075ea?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tekst {
+    text-align: center;
+    color: white;
+    padding: 200px;
+}
+
+h1 {
+    font-size: 4vw;
+    margin: 0.5vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+    margin: 0.5vw;
+}
+
+.opis {
+    text-align: center;
+}
+
+.opis h1 {
+    color: black;
+    font-size: 2.5vw;
+}
+
+.opis p {
+    color: rgb(100, 100, 100);
+    font-size: 1.25vw;
+    margin: 0 15vw;
+    padding: 2vw;
+}
+
+.linia {
+    border-top: 2px solid rgb(175, 175, 175);
+    margin: 0 20vw;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin: 2.5vw;
+}
+
+.tabelka {
+    position: relative; /* Required for absolute positioning of overlay text */
+}
+
+.tabelka img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tabelka img:hover {
+    filter: brightness(0.9);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 3vw;
+    left: 1vw;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    pointer-events: none; 
+}
+
+.image-container:hover .overlay-text {
+    color: #fff;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #d0d0d0;
+    padding: 3vw;
+    border-top: 1px solid #818181;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+/* Company Name Styling */
+.footer-company {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+/* Contact text styling */
+.footer-right p {
+    margin: 0;
+    font-size: 1.3vw;
+    color: #333;
+}
+
+/* Email link styling */
+.footer-right a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
