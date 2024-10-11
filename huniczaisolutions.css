@@ -1,0 +1,376 @@
+/* Existing CSS */
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    font-family: "Montserrat";
+    background-color: white;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Navigation bar styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding-top: 2vw;
+    z-index: 1000;
+}
+
+/* Section top margin to avoid overlap with fixed nav */
+section {
+    margin-top: 12vw;
+}
+
+/* Navigation list styling */
+nav ul {
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Navigation links styling */
+.przyciski {
+    font-size: 1.5vw;
+    margin-right: 4vw;
+    margin-top: 1vw;
+}
+
+.przyciski a {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+}
+
+.przyciski a:hover {
+    color: black;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+.main a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+    margin: 0 30px;
+}
+
+.main a:hover {
+    color: rgb(100, 100, 100);
+}
+
+/* Hero section styling */
+.glownetlo {
+    background-image: url(https://images.unsplash.com/photo-1701486485364-edaa591075ea?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tekst {
+    text-align: center;
+    color: white;
+    padding: 200px;
+}
+
+h1 {
+    font-size: 4vw;
+    margin: 0.5vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+    margin: 0.5vw;
+}
+
+/* Description section styling */
+.opis {
+    text-align: center;
+}
+
+.opis h1 {
+    color: black;
+    font-size: 2.5vw;
+}
+
+.opis p {
+    color: rgb(100, 100, 100);
+    font-size: 1.4vw;
+    margin: 0 15vw;
+    padding-top: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw; /* Fixed typo from '2w' to '2vw' */
+}
+
+.linia {
+    border-top: 2px solid rgb(175, 175, 175);
+    margin: 0 20vw;
+}
+
+/* Image grid styling */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin: 2.5vw;
+}
+
+.tabelka {
+    position: relative; /* Required for absolute positioning of overlay text */
+}
+
+.tabelka img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tabelka img:hover {
+    filter: brightness(0.9);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 3vw;
+    left: 1vw;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    pointer-events: none; 
+}
+
+/* Corrected the class selector to match HTML structure */
+.tabelka:hover .overlay-text {
+    color: #fff;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #d0d0d0;
+    padding: 3vw;
+    border-top: 1px solid #818181;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+/* Company Name Styling */
+.footer-company {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+/* Contact text styling */
+.footer-right p {
+    margin: 0;
+    font-size: 1.3vw;
+    color: #333;
+}
+
+/* Email link styling */
+.footer-right a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Media Query for Tablets and Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust navigation padding and font sizes */
+    nav {
+        height: auto; /* Allow nav height to adjust based on content */
+        padding: 1vw 2vw; /* Reduce padding for smaller screens */
+    }
+
+    /* Adjust font size and margins for navigation buttons */
+    .przyciski {
+        font-size: 3vw; /* Slightly larger for better readability */
+        margin-right: 2vw; /* Reduce right margin */
+        margin-top: 0.5vw; /* Reduce top margin */
+    }
+
+    /* Adjust main navigation link font size and margin */
+    .main a {
+        font-size: 5vw; /* Increase font size for visibility */
+        margin: 0 15px; /* Reduce horizontal margin */
+    }
+
+    /* Stack navigation items vertically if needed */
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add vertical spacing between nav items */
+    }
+
+    /* Adjust the top margin of sections to account for the nav height */
+    section {
+        margin-top: 20vw; /* Increase top margin to prevent overlap */
+    }
+
+    /* Adjust the padding of .tekst for the hero section */
+    .tekst {
+        margin-top: 100px;
+        padding: 100px 20px; /* Reduce padding on smaller screens */
+    }
+
+
+
+
+    /* Adjust the .opis margins and padding */
+    .opis p {
+        margin: 0 5vw; /* Reduce horizontal margins */
+        padding: 16px; /* Adjust padding */
+        font-size: 16px;
+    }
+
+
+    .tekst h1{
+        font-size: 25px;
+    }
+
+    .tekst h2{
+        font-size: 13px;
+    }
+
+
+
+    .opis h1{
+        font-size: 20px;
+    }
+
+
+    /* Adjust the image grid to have two columns */
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns instead of three */
+        gap: 2vw; /* Reduce gap between images */
+        margin: 1.5vw; /* Reduce margin around the grid */
+    }
+
+    /* Adjust overlay text size and position */
+    .overlay-text {
+        bottom: 2vw; /* Move overlay text slightly higher */
+        left: 1vw; /* Maintain left position */
+        font-size: 3vw; /* Increase font size for readability */
+    }
+
+    /* Footer adjustments for smaller screens */
+    .footer-container {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-right {
+        text-align: center; /* Center align contact info */
+        margin-top: 1.5vw; /* Add top margin for spacing */
+    }
+
+    .footer-company {
+        font-size: 5vw; /* Increase company name font size */
+    }
+
+    .footer-right p {
+        font-size: 3vw; /* Increase contact text font size */
+    }
+}
+
+/* Media Query for Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Further adjust navigation padding and font sizes */
+    nav {
+        padding: 2vw 4vw; /* Increase padding for better touch targets */
+    }
+
+    /* Adjust font size and margins for navigation buttons */
+    .przyciski {
+        font-size: 4vw; /* Further increase font size */
+        margin-right: 1vw; /* Reduce right margin */
+        margin-top: 0.5vw; /* Maintain top margin */
+    }
+
+    /* Adjust main navigation link font size */
+    .main a {
+        font-size: 16px; /* Further increase font size for small screens */
+    }
+
+    /* Adjust the .glownetlo padding for the hero section */
+    .tekst {
+        padding: 80px 10px; /* Reduce padding to fit smaller screens */
+    }
+
+    /* Adjust the image grid to a single column */
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1.5vw; /* Reduce gap between images */
+        margin: 1vw; /* Further reduce margin around the grid */
+    }
+
+    /* Adjust overlay text size and position */
+    .overlay-text {
+        bottom: 1vw; /* Move overlay text higher */
+        left: 0.5vw; /* Adjust left position */
+        font-size: 4vw; /* Further increase font size for readability */
+    }
+
+    /* Footer adjustments for mobile screens */
+    .footer-company {
+        font-size: 6vw; /* Further increase company name font size */
+    }
+
+    .footer-right p {
+        font-size: 4vw; /* Further increase contact text font size */
+    }
+}
