@@ -374,3 +374,9 @@ img {
         font-size: 4vw; /* Further increase contact text font size */
     }
 }
+@media (min-width: 768px) {
+    .footer-container {
+        max-width: 90vw
+    }
+
+}
