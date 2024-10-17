@@ -389,3 +389,22 @@ img {
         margin-left: 0; /* Remove left margin */
     }
 }
+
+@media (min-width:768px) {
+    .nwm:nth-child(odd) .nwm-image {
+        order: 1; /* Obrazek pierwszy dla sekcji nieparzystych */
+    }
+    
+    .nwm:nth-child(odd) .nwm-text {
+        order: 2; /* Tekst drugi dla sekcji nieparzystych */
+    }
+    
+    .nwm:nth-child(even) .nwm-image {
+        order: 2; /* Obrazek drugi dla sekcji parzystych */
+    }
+    
+    .nwm:nth-child(even) .nwm-text {
+        order: 1; /* Tekst pierwszy dla sekcji parzystych */
+    }
+    
+}
